@@ -1,15 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
-import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler";
+import { PanGestureHandler } from "react-native-gesture-handler";
 
 const SIZE = 100.0;
 const CIRCLE_RADIUS = SIZE * 2;
 
-const ContextType = {
-  translateX: Number,
-  translateY: Number
-}
 
 export default function App() {
 
@@ -32,9 +28,6 @@ export default function App() {
         translateX.value = withSpring(1.5);
         translateY.value = withSpring(0.5);
       }
-      // translateY.value = withSpring(0.5);
-      // translateX.value = withSpring(1.5);
-
     }
   });
 
